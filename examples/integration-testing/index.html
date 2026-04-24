@@ -1,0 +1,20 @@
+<!doctype html>
+<title>Todos</title>
+<h1>Todos</h1>
+<form method="post" action="/todos">
+  <input name="title" placeholder="what next?" autofocus required>
+  <button>add</button>
+</form>
+<ul id="list">
+{{range .}}
+  <li data-id="{{.ID}}">
+    <form method="post" action="/todos/{{.ID}}/toggle" style="display:inline">
+      <button>{{if .Done}}undo{{else}}done{{end}}</button>
+    </form>
+    <span{{if .Done}} style="text-decoration:line-through"{{end}}>{{.Title}}</span>
+    <form method="post" action="/todos/{{.ID}}/delete" style="display:inline">
+      <button class="delete">x</button>
+    </form>
+  </li>
+{{end}}
+</ul>

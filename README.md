@@ -1,2 +1,5 @@
-# agentcodebyexample
-Agentic Coding by Example
+# Agentic Coding by Example
+
+## Credits
+
+- https://github.com/mmcgrana/gobyexample
