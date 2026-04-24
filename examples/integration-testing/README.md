@@ -21,6 +21,10 @@ For critical paths, well designed tests are worth coding by hand to start, stubb
 
 After that, an agent can easily crank on the implementation to get the tests passing.
 
+### Browser Testing
+
+One of the most advanced forms of integration testing is testing from the perspective of a user nagivating, clicking and typing in a web page. Structuring our tests and code that make these scenarios easy to describe, execute, and capture screenshots from lets the LLM test and add behaviors to our web app and verify the resulting screenshots visually.
+
 ## References
 
 - https://en.wikipedia.org/wiki/Test-driven_development
