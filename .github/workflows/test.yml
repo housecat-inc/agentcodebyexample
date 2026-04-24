@@ -16,5 +16,8 @@ jobs:
         with:
           go-version-file: go.mod
 
+      # Allow chromium's sandbox to start under Ubuntu 24.04's AppArmor policy.
+      - run: sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
+
       - run: go generate ./...
       - run: go test ./...
